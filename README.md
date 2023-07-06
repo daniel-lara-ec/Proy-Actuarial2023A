@@ -23,3 +23,12 @@ Los pasos realizados en esta sección se encuentran en la carpeta:
 ## Sitio web
 El sitio desarrollado con la información obtenida se encuentra en:
 - sitio web
+
+# Autores:
+- Carlos Guamán
+- Luis Gualavisi
+- Daniel Lara 
+- Rubén Tuquerrez
+- Juan Villarroel
+
+Escuela Politécnica Nacional - Facultad de Ciencias 2023
