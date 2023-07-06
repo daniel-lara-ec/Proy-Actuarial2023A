@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="main">
+
+    <div class="container">
+        <h1>Graficas de las probabilidades de fallecimiento</h1>
+
+        <div class="container" style="overflow-x: auto;">
+            {{ grafica | safe }}     
+          </div>
+        
+    </div>
+</div>
+
+{% endblock %}

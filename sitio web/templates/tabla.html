@@ -1,0 +1,79 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="main">
+
+    <div class="container">
+        <h1>Tabla de mortalidad</h1>
+
+        <div class="row" style="padding-bottom: 20px;">
+            <div class="col-sm-6">
+                <a href="{% url  'Descargar'%}" class="btn btn-primary"
+                    style="float:left;">Descargar</a>
+            </div>
+        </div>
+
+        <h1>Hombres</h1>
+
+        <div style="overflow-x:auto;padding-bottom: 100px;width: 100%;padding-right: 15px;padding-left: 15px;">
+            <table class="table table-striped" style="overflow-x:auto;display: block;font-size:90%">
+                <thead>
+                    <tr>
+                        <th>Edad</th>
+                        <th>qxH_SA</th>
+                        <th>lx</th>
+                        <th>dx</th>
+                        <th>Lx</th>
+                        <th>Tx</th>
+                        <th>ex</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for i in df_hombres %}
+                    <tr>
+                        <td>{{i.Edad}}</td>
+                        <td>{{i.qxH_SA}}</td>
+                        <td>{{i.lx}}</td>
+                        <td>{{i.dx}}</td>
+                        <td>{{i.Lx}}</td>
+                        <td>{{i.Tx}}</td>
+                        <td>{{i.ex}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h1>Mujeres</h1>
+
+        <div style="overflow-x:auto;padding-bottom: 100px;width: 100%;padding-right: 15px;padding-left: 15px;">
+            <table class="table table-striped" style="overflow-x:auto;display: block;font-size:90%">
+                <thead>
+                    <tr>
+                        <th>Edad</th>
+                        <th>qxM_SA</th>
+                        <th>lx</th>
+                        <th>dx</th>
+                        <th>Lx</th>
+                        <th>Tx</th>
+                        <th>ex</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for i in df_mujeres %}
+                    <tr>
+                        <td>{{i.Edad}}</td>
+                        <td>{{i.qxM_SA}}</td>
+                        <td>{{i.lx}}</td>
+                        <td>{{i.dx}}</td>
+                        <td>{{i.Lx}}</td>
+                        <td>{{i.Tx}}</td>
+                        <td>{{i.ex}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

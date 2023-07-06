@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+
+
+<div class="main" style="padding-left: 10%;padding-bottom: 100px;">
+    <h2>Calculadora de seguros</h2>
+    <p>En esta sección puedes ingresar los datos para calcular los siguientes seguros:
+        <ul>
+            <li>Seguro de vida temporal</li>
+            <li>Seguro de vida entera</li>
+            <li>Seguro de supervivencia</li>
+        </ul>
+    </p>
+    <p>Se realizan los cálculos de los 3 seguros de manera simultánea. El interés se ingresa en porcentaje. </p>
+    <div style="padding-left: 5%;">
+    <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary">Calcular</button>
+    </form>
+</div>
+</div>
+
+{% endblock %}

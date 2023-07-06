@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="main">
+
+    <div class="container">
+        <h1>Resultado de cálculo de seguros</h1>
+        <p><b>Seguro de vida entera:</b> ${{seguro_entera}}</p>
+        <p><b>Seguro de vida temporal:</b> ${{seguro_temporal}}</p>
+        <p><b>Seguro de supervivencia:</b> ${{seguro_supervivencia}}</p>
+    
+
+    <a href="{% url 'Calculadora' %}" class="btn btn-primary">Volver</a>
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Tablas de mortalidad para la amazonía</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="Daniel Lara" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <!-- fevicon -->
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen" />
+</head>
+
+<body>
+    <!-- header section start -->
+    <div class="header_section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo">
+                <a href="/"><img width="70%" style="margin-top: 10px" src="{% static 'img/EPN.png' %}" /></a>
+            </div>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'Index' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Indicadores' %}">Indicadores
+                            de mortalidad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Calculadora' %}">Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Tabla' %}">Tabla</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Grafica' %}">Grafica</a>
+                    </li>
+            </div>
+        </nav>
+    </div>
+
+    {% block content %} {% endblock %}
+
+    <div class="copyright_section">
+        <p class="copyright_text" style="margin:2px">
+            Escuela Politécnica Nacional - Facultad de Ciencias
+        </p>
+        <p class="copyright_text" style="margin:2px"> Matemática Actuarial - Implementado por <a href="mailto:daniel.lara01@epn.edu.ec">Daniel Matías Lara</a></p>
+    </div>
+    <!-- copyright section end -->
+    <!-- Javascript files-->
+
+</body>
+
+</html>
